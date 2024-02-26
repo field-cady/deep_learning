@@ -1,0 +1,12 @@
+Download from https://docs.docker.com/desktop/install/ubuntu/
+
+sudo service docker start
+sudo docker run hello-world
+docker run -it ubuntu  #
+docker start -i f96a01633fa6  # start it and shell in
+
+# Build this image
+sudo docker build -t example . --no-cache
+sudo docker run -p 8000:8000 --rm --name example_running example
+
+curl --data '{"username":"xyz","password":"xyz"}' http://127.0.0.1:8000/predict 
