@@ -1,0 +1,13 @@
+
+Followed:
+https://medium.com/@weidagang/hello-llm-building-a-local-chatbot-with-langchain-and-llama2-3a4449fc4c03
+
+pip3 install langchain llama-cpp-python
+pip3 install huggingface-hub>=0.17.1
+
+huggingface-cli download TheBloke/Llama-2-7b-Chat-GGUF llama-2-7b-chat.Q4_K_M.gguf --local-dir . --local-dir-use-symlinks False
+
+pip3 install -U sentence-transformers
+pip3 install faiss-cpu
+
+

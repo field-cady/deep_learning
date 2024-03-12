@@ -1,20 +1,22 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, session
+from flask_session import Session
 
 app = Flask(__name__)
+app.secret_key = 'foo'
+Session(app)
+
+#n = 0
 
 # Define an endpoint for calling the predict function based on your ml library/framework
 @app.route("/predict", methods=["GET","POST"])
 def predict():
     # Load the Input
-    data = request.get_json(force=True)#.decode('utf-8')
-    #data = "foo"
+    data = request.get_json(force=True)
     
     # Load the model
     #model = load_model()
     
-    # Make predictions on input data
-    #model.predict(data) # .predict() could change based on libarary/framework
-    return '-' + data['username'] + '_output'
+    return f"{data['username']} has hit\n"
   
   
 # Start the flask app and allow remote connections

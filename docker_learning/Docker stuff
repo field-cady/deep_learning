@@ -9,4 +9,9 @@ docker start -i f96a01633fa6  # start it and shell in
 sudo docker build -t example . --no-cache
 sudo docker run -p 8000:8000 --rm --name example_running example
 
+# Hit the running API
 curl --data '{"username":"xyz","password":"xyz"}' http://127.0.0.1:8000/predict 
+
+# make an image of the container
+docker commit example example_image:latest
+
