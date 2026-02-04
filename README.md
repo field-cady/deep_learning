@@ -14,3 +14,4 @@ and uses an LLM API to compose sentences that
 
 This is a simple RAG system that pulls information
 out of some PDFs.
+It uses LangChain and the FAISS stack.
