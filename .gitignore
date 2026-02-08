@@ -1,0 +1,4 @@
+
+*ipynb_checkpoints*
+chatbot/models/*.gguf
+*__pycache__*
