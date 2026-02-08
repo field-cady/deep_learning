@@ -1,4 +1,5 @@
-
+langchain_examples/models
 *ipynb_checkpoints*
+language_practice/models/
 chatbot/models/*.gguf
 *__pycache__*
